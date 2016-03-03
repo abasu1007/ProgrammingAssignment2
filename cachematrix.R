@@ -12,7 +12,7 @@ makeCacheMatrix <- function(x = matrix()) {
         ## in this environment
         Inv <- NULL
         
-        ## set function defines assigns the invertible matrix to a variable x 
+        ## set function assigns the invertible matrix to a variable x while assigning NULL to Inv
         set <- function(y) {
                 x <<- y
                 Inv <<- NULL
