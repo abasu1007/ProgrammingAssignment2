@@ -46,6 +46,11 @@ cacheSolve <- function(x, ...) {
                 message("getting inverse from cached value")
                 return(Inv)
         }
+		matrix_original <- x$get()
+		if (nrow(matrix_original) != ncol(matrix_original)){
+		        message("Inverse not possible")
+				return(NULL)
+		}
         Inv <- solve(x$get(), ...)
         x$setInverse(Inv)
         Inv
